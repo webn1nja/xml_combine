@@ -98,7 +98,6 @@ def xml_files_proccessing(filename, data):
     wh_name = filename[start_index+1:stop_index]
 
     # обрабатываем xml
-
     mydoc = minidom.parse(filename)
     items = mydoc.getElementsByTagName('offer')
 
@@ -154,9 +153,9 @@ def generate_output_file(data: Dict[str, Dict]) -> TextIO:
         outlets_start = '\t\t\t\t<outlets>\n'
 
         oldprice_xml = '\t\t\t\t<oldprice>{0}</oldprice>\n'
-        
+
         outlet_xml = '\t\t\t\t\t<outlet instock="{0}" warehouse_name="{1}"/>\n'
-        
+
         offer_xml_content_end = '''\t\t\t\t</outlets>
 \t\t\t</offer>\n'''
         output_content += offer_xml_content_start.format(k, v['price'])
