@@ -4,7 +4,7 @@ ver. 1.0
 
 >This script is designed to combine several XML files with the availability of goods into one according to the rules of the Ozone marketplace with the indication of warehouses.
 
->Для получения содержимого предложенного url выполняется обход Cloudflare's anti-bot page
+>Для получения содержимого предложенных url выполняется обход Cloudflare's anti-bot page
 
 #### Установка виртуального окружения
 
