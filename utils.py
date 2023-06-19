@@ -1,4 +1,5 @@
 import hashlib
+import os
 from datetime import datetime
 from typing import Dict, TextIO
 from xml.dom import minidom
@@ -92,7 +93,7 @@ def get_current_timestring() -> str:
 def xml_files_proccessing(filename, data):
 
     # получаем название склада
-    start_index = filename.find('\\')
+    start_index = filename.find(os.sep)
     stop_index = filename.rfind('-')
 
     wh_name = filename[start_index+1:stop_index]
@@ -154,7 +155,7 @@ def generate_output_file(data: Dict[str, Dict]) -> TextIO:
 
         oldprice_xml = '\t\t\t\t<oldprice>{0}</oldprice>\n'
 
-        outlet_xml = '\t\t\t\t\t<outlet instock="{0}" warehouse_name="{1}"/>\n'
+        outlet_xml = '\t\t\t\t\t<outlet instock="{0}" warehouse_name="{1}"></outlet>\n'
 
         offer_xml_content_end = '''\t\t\t\t</outlets>
 \t\t\t</offer>\n'''
@@ -173,3 +174,4 @@ def generate_output_file(data: Dict[str, Dict]) -> TextIO:
 
     with open(vars.output_file, 'w', encoding="utf-8") as f:
         f.write(output_content)
+
