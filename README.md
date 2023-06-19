@@ -1,6 +1,6 @@
 # Cкрипт для объединения нескольких XML-файлов с наличием товара в один по правилам маркетплейса Озон с указанием складов
 
-ver. 1.0
+ver. 1.1
 
 >This script is designed to combine several XML files with the availability of goods into one according to the rules of the Ozone marketplace with the indication of warehouses.
 
