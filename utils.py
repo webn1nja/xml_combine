@@ -155,7 +155,10 @@ def generate_output_file(data: Dict[str, Dict]) -> TextIO:
 
         oldprice_xml = '\t\t\t\t<oldprice>{0}</oldprice>\n'
 
-        outlet_xml = '\t\t\t\t\t<outlet instock="{0}" warehouse_name="{1}"></outlet>\n'
+        outlet_xml = (
+            '\t\t\t\t\t<outlet instock="{0}"'
+            + ' warehouse_name="{1}"></outlet>\n'
+        )
 
         offer_xml_content_end = '''\t\t\t\t</outlets>
 \t\t\t</offer>\n'''
